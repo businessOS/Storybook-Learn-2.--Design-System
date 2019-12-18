@@ -2,6 +2,7 @@
 /taskbox/node_modules
 /taskbox/.pnp
 .pnp.js
+.txt
 
 # testing
 /taskbox/coverage
@@ -19,3 +20,4 @@
 /taskbox/npm-debug.log*
 /taskbox/yarn-debug.log*
 /taskbox/yarn-error.log*
+learnstorybook-design-system/public/robots.txt
