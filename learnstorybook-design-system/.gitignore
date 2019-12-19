@@ -5,14 +5,14 @@
 /.pnp
 .pnp.js
 
-# build
-/build
-
 # testing
 /coverage
 
 # production
-/build
+storybook-static
+dist
+build
+.env
 
 # misc
 .DS_Store

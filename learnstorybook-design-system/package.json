@@ -1,7 +1,7 @@
 {
   "name": "learnstorybook-design-system",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@storybook/design-system": "^2.0.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -16,13 +16,18 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "build-storybook -c .storybook -o build",
+    "build": "BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "build-storybook-docs": "build-storybook -s public --docs",
     "chromatic": "npx chromatic --app-code=x224tvk0gq"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.7",
     "@storybook/addon-a11y": "^5.2.8",
     "@storybook/addon-actions": "^5.2.8",
     "@storybook/addon-docs": "^5.2.8",
@@ -48,6 +54,12 @@
     "@storybook/addon-storysource": "^5.2.8",
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
+    "auto": "^8.6.2",
     "storybook-chromatic": "^3.4.1"
-  }
+  },
+  "description": "Learn Storybook design system",
+  "main": "index.js",
+  "repository": "https://github.com/chromaui/learnstorybook-design-system.git",
+  "author": "Tom Coleman <tom@thesnail.org>",
+  "license": "MIT"
 }
